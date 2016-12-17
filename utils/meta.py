@@ -17,6 +17,8 @@ fileComments = { "hs" : comments.haskell
 
 
 def include( base, path ):
+    if base is None:
+        return {}
     if path is None:
         return base
 
