@@ -1,6 +1,10 @@
-import comments
 import yaml
 import os
+import sys
+root = os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) )
+if root not in sys.path:
+    sys.path.append( root )
+import utils.comments as comments
 
 fileComments = { "hs" : comments.haskell
                , "c" : comments.c
